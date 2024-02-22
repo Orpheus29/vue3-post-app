@@ -35,6 +35,7 @@ const routes =[
 
 const router = createRouter({
   routes,
+  base: '/vue3-post-app/',
   history: createWebHistory(process.env.BASE_URL)
 });
 
