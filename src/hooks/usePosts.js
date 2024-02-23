@@ -33,5 +33,6 @@ export default function usePosts(limit) {
     totalPages,
     isPostsLoading,
     fetching,
+    page,
   }
 }

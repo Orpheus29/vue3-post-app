@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>A little about this app</h1>
+    <h1>A little about this app.</h1>
   </div>
 </template>
 

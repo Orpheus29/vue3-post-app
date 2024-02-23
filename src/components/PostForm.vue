@@ -9,7 +9,7 @@
       v-model="post.title"
       type="text"
       placeholder="Title"
-      v-focus
+      :autoFocus="true"
     />
 
     <my-input
@@ -18,7 +18,7 @@
       placeholder="Content"
     />
 
-    <my-button @click="createPost">Create post</my-button>
+    <my-button @click="validateAndCreatePost">Create post</my-button>
   </form>
 </template>
 
@@ -29,23 +29,25 @@ export default {
       post: {
         title: '',
         body: '',
-      }
+      },
     }
   },
   methods: {
-    createPost() {
-      this.post.id = Date.now();
-      this.$emit('create', this.post);
-      this.post={title: '', body: ''};
+    validateAndCreatePost() {
+      if (this.post.title !== '' && this.post.body !== '') {
+        this.post.id = Date.now();
+        this.$emit('create', this.post);
+        this.post = { title: '', body: '' };
+      }
     },
   },
 }
 </script>
 
 <style scoped>
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 </style>

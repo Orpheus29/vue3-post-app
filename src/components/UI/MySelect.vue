@@ -2,6 +2,7 @@
   <select
     :value="modelValue"
     @change="changeOption"
+    class="selector"
   >
     <option
       disabled
@@ -39,4 +40,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.selector:focus {
+  outline: 1px solid teal;
+}
+</style>

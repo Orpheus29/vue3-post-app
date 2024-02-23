@@ -40,5 +40,6 @@ export default {
 .post__btns {
   display: flex;
   gap: 10px;
+  margin-left: 10px;
 }
 </style>

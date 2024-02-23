@@ -10,6 +10,7 @@ export const postModule = {
     limit: 10,
     totalPages: 0,
     sortOptions: [
+      { value: 'ID', name: 'By ID' },
       { value: 'title', name: 'By title' },
       { value: 'body', name: 'By content' },
     ]

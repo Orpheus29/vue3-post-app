@@ -20,9 +20,11 @@ import NavbarBlock from '@/components/NavbarBlock.vue';
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
 .app {
   padding: 20px;
+  font-size: 15px;
 }
 </style>

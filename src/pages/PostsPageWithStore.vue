@@ -6,15 +6,13 @@
     <my-button @click="$store.commit('incrementLikes')">+</my-button>
     <my-button @click="$store.commit('decrementLikes')">-</my-button>
   </div> -->
-  <h2 style="text-transform: uppercase; ">list of posts</h2>
+  <h1 class="main__title">list of posts</h1>
 
   <my-input
     :modelValue="searchQuery"
     @update:modelValue="setSearchQuery"
-    type="text"
     placeholder="Search..."
-    style="margin-top: 10px;"
-    v-focus
+    :autoFocus="true"
   />
 
   <div class="app__btns">
@@ -24,6 +22,8 @@
       :modelValue="selectedSortOption"
       @update:modelValue="setSelectedSortOption"
       :options="sortOptions"
+      class="btn"
+      style="padding: 10px 5px;"
     />
   </div>
 
@@ -105,6 +105,12 @@ export default {
 </script>
 
 <style>
+.main__title {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
 .app__btns {
   display: flex;
   justify-content: space-between;

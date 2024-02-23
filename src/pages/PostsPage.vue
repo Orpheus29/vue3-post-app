@@ -1,12 +1,11 @@
 <template>
   <div>
-    <h2 style="text-transform: uppercase; ">list of posts</h2>
+    <h1 class="main__title">list of posts</h1>
 
     <my-input
       v-model="searchQuery"
       type="text"
       placeholder="Search..."
-      style="margin-top: 10px;"
       v-focus
     />
 
@@ -16,6 +15,8 @@
       <my-select
         v-model="selectedSortOption"
         :options="sortOptions"
+        class="btn"
+        style="padding: 10px 5px;"
       />
     </div>
 
@@ -79,6 +80,7 @@ export default {
       totalPages: 0,
       selectedSortOption: '',
       sortOptions: [
+        {value: 'ID', name: 'By ID'},
         {value: 'title', name: 'By title'},
         {value: 'body', name: 'By content'},
       ]
@@ -173,6 +175,12 @@ export default {
 </script>
 
 <style>
+.main__title {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
 .app__btns {
   display: flex;
   justify-content: space-between;
