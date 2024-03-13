@@ -1,4 +1,4 @@
-<h1 align="center">🌧️🔰Vue 3 Post App🔰🌧️</h1>
+<h1 align="center">✍🏻🔰Vue 3 Post App🔰💬</h1>
 
 <p align="center">
   <sup>A demonstration application showcasing the core features of Vue 3.</sup>
